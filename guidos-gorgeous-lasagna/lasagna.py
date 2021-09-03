@@ -3,7 +3,6 @@ This module contains functions based on the preparation time of a lasagna
 '''
 
 EXPECTED_BAKE_TIME = 40
-
 PREPARATION_TIME = 2
 
 
@@ -12,7 +11,6 @@ def bake_time_remaining(elapsed_bake_time):
     :param elapsed_bake_time: int baking time already elapsed
     :return: int remaining bake time derived from 'EXPECTED_BAKE_TIME'
     '''
-
     return EXPECTED_BAKE_TIME - elapsed_bake_time
 
 
