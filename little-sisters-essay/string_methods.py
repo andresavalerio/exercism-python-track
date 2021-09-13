@@ -4,7 +4,7 @@ def capitalize_title(title):
     :param title: str title string that needs title casing
     :return:  str title string in title case (first letters capitalized)
     """
-    return " ".join([word.capitalize() for word in title.split(" ")])
+    return title.title()
 
 
 def check_sentence_ending(sentence):
