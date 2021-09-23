@@ -7,4 +7,5 @@ def classify(number):
             f.add(n)
             f.add(int(number/n))
     sum_f = sum(f)
-    return 'perfect' if sum_f == number else ('abundant' if sum_f > number else 'deficient') 
+    return 'perfect' if sum_f == number else \
+        ('abundant' if sum_f > number else 'deficient')

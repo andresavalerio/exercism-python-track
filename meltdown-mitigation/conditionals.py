@@ -8,10 +8,13 @@ def is_criticality_balanced(temperature, neutrons_emitted):
     A reactor is said to be critical if it satisfies the following conditions:
     - The temperature is less than 800.
     - The number of neutrons emitted per second is greater than 500.
-    - The product of temperature and neutrons emitted per second is less than 500000.
+    - The product of temperature and neutrons emitted per second is less than
+    500000.
     """
 
-    return temperature < 800 and neutrons_emitted > 500 and temperature * neutrons_emitted < 500000
+    return temperature < 800 \
+        and neutrons_emitted > 500 \
+        and temperature * neutrons_emitted < 500000
 
 
 def reactor_efficiency(voltage, current, theoretical_max_power):
@@ -54,7 +57,8 @@ def fail_safe(temperature, neutrons_produced_per_second, threshold):
 
     - `temperature * neutrons per second` < 40% of threshold == 'LOW'
     - `temperature * neutrons per second` +/- 10% of `threshold` == 'NORMAL'
-    - `temperature * neutron per second` is not in the above-stated ranges ==  'DANGER'
+    - `temperature * neutron per second` is not in the above-stated
+    ranges == 'DANGER'
     """
 
     prod = temperature * neutrons_produced_per_second

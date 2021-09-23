@@ -8,9 +8,10 @@ allnames = [let + num for let, num in product(letters, numbers)]
 shuffle(allnames)
 names = iter(allnames)
 
+
 class Robot:
     def __init__(self):
         self.reset()
-    
+
     def reset(self):
         self.name = next(names)

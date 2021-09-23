@@ -46,7 +46,8 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
     :param denomination: int - the value of a single bill.
     :return:
     '''
-    exchange_value = estimate_value(budget, exchange_rate * (1.0 + spread / 100))
+    exchange_value = estimate_value(budget,
+                                    exchange_rate * (1.0 + spread / 100))
     bills = get_number_of_bills(exchange_value, denomination)
     return get_value(denomination, bills)
 
@@ -60,5 +61,6 @@ def unexchangeable_value(budget, exchange_rate, spread, denomination):
     :return:
     '''
     estimate = estimate_value(budget, exchange_rate * (1.0 + spread / 100))
-    exchangeable = exchangeable_value(budget, exchange_rate, spread, denomination)
+    exchangeable = exchangeable_value(budget, exchange_rate,
+                                      spread, denomination)
     return int(estimate - exchangeable)
