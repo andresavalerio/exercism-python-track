@@ -1,4 +1,6 @@
-Solved exercises from the Python track.
+# Exercism Python Track
+
+This repository contains solved exercises from the Python track.
 
 Public solutions [@exercism](https://exercism.io/profiles/andresavalerio).
 
